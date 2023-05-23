@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "/public/logo.png";
+import logo from "/logo.png";
 
 import { useState } from "react";
 
@@ -57,11 +57,13 @@ const Hamburger = styled.img`
 `;
 
 const Menu = styled.div`
+  position: absolute;
   width: 100%;
   padding: 20px 32px 32px 32px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background: #ffffff;
   @media (min-width: 768px) {
     padding: 16px 40px 16px 14px;
     flex-direction: row;
