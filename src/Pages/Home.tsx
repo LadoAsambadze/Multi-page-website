@@ -58,6 +58,82 @@ export default function Home() {
           </DivForButton>
         </TextBox>
       </Bitmap>
+      <PhotoGrid>
+        <Photo>
+          <InsidePhoto src="/mountain.png" />
+          <TextOnPhoto>
+            <PhotoHeader>The Mountains</PhotoHeader>
+            <Author>by John Appleseed</Author>
+            <Line></Line>
+            <DivForButtons>
+              <Story>READ STORY</Story>
+              <StoryArrow src="arrow.png" alt="Arrow" />
+            </DivForButtons>
+          </TextOnPhoto>
+        </Photo>
+        <Photo>
+          <InsidePhoto src="/city.png" />
+          <TextOnPhoto>
+            <PhotoHeader>Sunset Cityscapes</PhotoHeader>
+            <Author>by Benjamin Cruz</Author>
+            <Line></Line>
+            <DivForButtons>
+              <Story>READ STORY</Story>
+              <StoryArrow src="arrow.png" alt="Arrow" />
+            </DivForButtons>
+          </TextOnPhoto>
+        </Photo>
+        <Photo>
+          <InsidePhoto src="/men.png" />
+          <TextOnPhoto>
+            <PhotoHeader>18 Days Voyage</PhotoHeader>
+            <Author>by Alexei Borodin</Author>
+            <Line></Line>
+            <DivForButtons>
+              <Story>READ STORY</Story>
+              <StoryArrow src="arrow.png" alt="Arrow" />
+            </DivForButtons>
+          </TextOnPhoto>
+        </Photo>
+        <Photo>
+          <InsidePhoto src="/building.png" />
+          <TextOnPhoto>
+            <PhotoHeader>Architecturals</PhotoHeader>
+            <Author>by Samantha Brooke</Author>
+            <Line></Line>
+            <DivForButtons>
+              <Story>READ STORY</Story>
+              <StoryArrow src="arrow.png" alt="Arrow" />
+            </DivForButtons>
+          </TextOnPhoto>
+        </Photo>
+      </PhotoGrid>
+      <Benefits>
+        <BenefitSection>
+          <img src="responsive.png" alt="Responsive pc logo" />
+          <Percent>100% Responsive</Percent>
+          <BenefitText>
+            No matter which the device you’re on, our site is fully responsive
+            and stories look beautiful on any screen.
+          </BenefitText>
+        </BenefitSection>
+        <BenefitSection>
+          <img src="forever.png" alt="unlimited" />
+          <Percent2>No Photo Upload Limit</Percent2>
+          <BenefitText>
+            Our tool has no limits on uploads or bandwidth. Freely upload in
+            bulk and share all of your stories in one go..
+          </BenefitText>
+        </BenefitSection>
+        <BenefitSection>
+          <img src="bullhorn.png" alt="bullhorn" />
+          <Percent>Available to Embed</Percent>
+          <BenefitText>
+            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+            videos, Google Maps, and more.
+          </BenefitText>
+        </BenefitSection>
+      </Benefits>
     </>
   );
 }
@@ -142,4 +218,153 @@ const GetInvite = styled.span`
   color: #ffffff;
   margin-right: 19px;
   text-transform: uppercase;
+`;
+
+const PhotoGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 0;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+`;
+
+const Photo = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+`;
+
+const InsidePhoto = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const TextOnPhoto = styled.div`
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 45px;
+  position: absolute;
+  transform: translateY(-103%);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0.27%,
+    rgba(0, 0, 0, 0.661222) 100%
+  );
+`;
+
+const PhotoHeader = styled.h1`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+`;
+const Author = styled.span`
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: white;
+  margin-top: 4px;
+`;
+
+const Line = styled.div`
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+`;
+
+const DivForButtons = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const Story = styled.span`
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #ffffff;
+`;
+
+const StoryArrow = styled.img`
+  cursor: pointer;
+`;
+
+const Benefits = styled.div`
+  width: 100%;
+  padding: 24px 32px 80px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    padding: 40px 156px 120px 156px;
+  }
+  @media (min-width: 1440px) {
+    padding: 120px 165px;
+    flex-direction: row;
+    justify-content: center;
+  }
+`;
+const BenefitSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 56px;
+  @media (min-width: 768px) {
+    margin-top: 85px;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 0;
+  }
+`;
+
+const Percent = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin-top: 48px;
+`;
+
+const Percent2 = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin-top: 48px;
+  @media (min-width: 1440px) {
+    margin-top: 80px;
+  }
+`;
+
+const BenefitText = styled.span`
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  margin-top: 16px;
 `;

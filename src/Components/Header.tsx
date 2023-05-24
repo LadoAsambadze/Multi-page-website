@@ -4,7 +4,7 @@ import logo from "/logo.png";
 import { useState } from "react";
 
 export default function Header() {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState<boolean>(true);
   return (
     <>
       <Head>
