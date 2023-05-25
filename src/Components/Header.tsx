@@ -33,13 +33,13 @@ export default function Header() {
         <InviteTablet>GET AN INVITE</InviteTablet>
       </Head>
       <Menu style={{ display: menu ? "none" : "flex" }}>
-        <Link className="link " to="/stories">
+        <Link className="link link3 " to="/stories">
           stories
         </Link>
-        <Link className="link" to="/features">
+        <Link className="link link3" to="/features">
           features
         </Link>
-        <Link className="link" to="/pricing">
+        <Link className="link link3" to="/pricing">
           pricing
         </Link>
         <Line></Line>
