@@ -194,6 +194,10 @@ const DesktopDiv = styled.div`
 `;
 
 const Extra = styled.div`
+  margin: auto;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
   @media (min-width: 1440px) {
     margin-top: 22px;
   }

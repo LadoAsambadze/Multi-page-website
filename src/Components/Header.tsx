@@ -11,6 +11,7 @@ export default function Header() {
         <img src={logo} alt="Logo" />
         <ItemBox>
           <ListItemTablet>stories</ListItemTablet>
+
           <ListItemTablet>features</ListItemTablet>
           <ListItemTablet>pricing</ListItemTablet>
         </ItemBox>
