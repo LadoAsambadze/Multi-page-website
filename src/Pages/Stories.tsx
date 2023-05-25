@@ -5,7 +5,7 @@ export default function Stories() {
   return (
     <>
       <Bitmap>
-        <BitmapMobile src="stories.jpg" alt="Men on bridge" />
+        <BitmapMobile src="stories.png" />
         <BitmapTablet src="stories-tablet.png" />
         <BitmapDesktop src="stories-desktop.png" />
         <TextBox>

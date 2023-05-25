@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Benefit from "../Components/Benefit";
 
 export default function Home() {
   return (
@@ -109,30 +110,27 @@ export default function Home() {
         </Photo>
       </PhotoGrid>
       <Benefits>
-        <BenefitSection>
-          <img src="responsive.png" alt="Responsive pc logo" />
-          <Percent>100% Responsive</Percent>
-          <BenefitText>
-            No matter which the device you’re on, our site is fully responsive
-            and stories look beautiful on any screen.
-          </BenefitText>
-        </BenefitSection>
-        <BenefitSection>
-          <img src="forever.png" alt="unlimited" />
-          <Percent2>No Photo Upload Limit</Percent2>
-          <BenefitText>
-            Our tool has no limits on uploads or bandwidth. Freely upload in
-            bulk and share all of your stories in one go..
-          </BenefitText>
-        </BenefitSection>
-        <BenefitSection>
-          <img src="bullhorn.png" alt="bullhorn" />
-          <Percent>Available to Embed</Percent>
-          <BenefitText>
-            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
-            videos, Google Maps, and more.
-          </BenefitText>
-        </BenefitSection>
+        <Benefit
+          benefitPhoto={"responsive.png"}
+          percent={"100% Responsive"}
+          benefitText={
+            "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen."
+          }
+        />
+        <Benefit
+          benefitPhoto={"forever.png"}
+          percent={"No Photo Upload Limit"}
+          benefitText={
+            "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+          }
+        />
+        <Benefit
+          benefitPhoto={"bullhorn.png"}
+          percent={"Available to Embed"}
+          benefitText={
+            "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "
+          }
+        />
       </Benefits>
     </>
   );
@@ -322,49 +320,4 @@ const Benefits = styled.div`
     flex-direction: row;
     justify-content: center;
   }
-`;
-const BenefitSection = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 56px;
-  @media (min-width: 768px) {
-    margin-top: 85px;
-  }
-  @media (min-width: 1440px) {
-    margin-top: 0;
-  }
-`;
-
-const Percent = styled.span`
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #000000;
-  margin-top: 48px;
-`;
-
-const Percent2 = styled.span`
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #000000;
-  margin-top: 48px;
-  @media (min-width: 1440px) {
-    margin-top: 80px;
-  }
-`;
-
-const BenefitText = styled.span`
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 25px;
-  text-align: center;
-  color: #000000;
-  mix-blend-mode: normal;
-  opacity: 0.6;
-  margin-top: 16px;
 `;
