@@ -23,18 +23,21 @@ export default function Footer() {
             </Extra>
             <div>
               <OptionList>
-                <Option>
-                  <Link to="/">home</Link>
-                </Option>
-                <Option>
-                  <Link to="/stories">stories</Link>
-                </Option>
-                <Option>
-                  <Link to="/features">features</Link>
-                </Option>
-                <Option>
-                  <Link to="/pricing">pricing</Link>
-                </Option>
+                <Link className="linkfooter" to="/">
+                  home
+                </Link>
+
+                <Link className="linkfooter" to="/stories">
+                  stories
+                </Link>
+
+                <Link className="linkfooter" to="/features">
+                  features
+                </Link>
+
+                <Link className="linkfooter" to="/pricing">
+                  pricing
+                </Link>
               </OptionList>
             </div>
           </DesktopDiv>
@@ -119,24 +122,7 @@ const OptionList = styled.div`
     align-items: flex-start;
   }
 `;
-const Option = styled.span`
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-top: 19px;
-  cursor: pointer;
-  @media (min-width: 768px) {
-    margin-right: 26px;
-  }
-  @media (min-width: 1440px) {
-    margin-top: 16;
-    margin-right: 0;
-  }
-`;
+
 const TabletDivTwo = styled.div`
   @media (min-width: 768px) {
     display: flex;

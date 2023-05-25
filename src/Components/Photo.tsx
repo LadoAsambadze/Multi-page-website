@@ -24,18 +24,17 @@ const Photo = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  background: white;
-
-  @media (min-width: 1440px) {
-    & :hover {
-      transform: translateY(-10%);
-    }
-  }
 `;
 
 const InsidePhoto = styled.img`
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  @media (min-width: 1440px) {
+    &:hover {
+      transform: translateY(-10%);
+    }
+  }
 `;
 
 const TextOnPhoto = styled.div`
@@ -44,7 +43,6 @@ const TextOnPhoto = styled.div`
   padding-right: 32px;
   padding-bottom: 45px;
   position: absolute;
-  transform: translateY(-103%);
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -52,6 +50,8 @@ const TextOnPhoto = styled.div`
     rgba(0, 0, 0, 0.0001) 0.27%,
     rgba(0, 0, 0, 0.661222) 100%
   );
+
+  bottom: 0;
 `;
 
 const PhotoHeader = styled.h1`
@@ -92,6 +92,7 @@ const Story = styled.span`
   line-height: 16px;
   letter-spacing: 2px;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const StoryArrow = styled.img`

@@ -35,17 +35,7 @@ const Percent = styled.span`
   margin-top: 48px;
 `;
 
-const Percent2 = styled.span`
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #000000;
-  margin-top: 48px;
-  @media (min-width: 1440px) {
-    margin-top: 80px;
-  }
-`;
+
 
 const BenefitText = styled.span`
   font-weight: 400;

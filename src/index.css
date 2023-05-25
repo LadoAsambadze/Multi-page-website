@@ -13,3 +13,46 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+.link {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2.5;
+  text-align: center;
+  color: #000000;
+  cursor: pointer;
+
+  text-decoration: none;
+  margin-left: 37px;
+}
+.link2 {
+  margin-top: 20px;
+  margin-left: 0;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.linkfooter {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 19px;
+  text-decoration: none;
+  cursor: pointer;
+  @media (min-width: 768px) {
+    margin-right: 26px;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 16;
+    margin-right: 0;
+  }
+}
+.linkfooter:hover {
+  text-decoration: underline;
+}

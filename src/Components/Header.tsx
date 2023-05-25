@@ -13,16 +13,15 @@ export default function Header() {
           <img src={logo} alt="Logo" />
         </Link>
         <ItemBox>
-          <ListItemTablet>
-            <Link to="/stories">stories</Link>
-          </ListItemTablet>
-
-          <ListItemTablet>
-            <Link to="/features">features</Link>
-          </ListItemTablet>
-          <ListItemTablet>
-            <Link to="/pricing">pricing</Link>
-          </ListItemTablet>
+          <Link className="link link2 " to="/stories">
+            stories
+          </Link>
+          <Link className="link link2" to="/features">
+            features
+          </Link>
+          <Link className="link link2" to="/pricing">
+            pricing
+          </Link>
         </ItemBox>
         <Hamburger
           src={menu ? "/hamburger.jpg" : "/x.png"}
@@ -34,16 +33,15 @@ export default function Header() {
         <InviteTablet>GET AN INVITE</InviteTablet>
       </Head>
       <Menu style={{ display: menu ? "none" : "flex" }}>
-        <ListItem>
-          <Link to="/stories">stories</Link>
-        </ListItem>
-
-        <ListItem>
-          <Link to="/features">features</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/pricing">pricing</Link>
-        </ListItem>
+        <Link className="link " to="/stories">
+          stories
+        </Link>
+        <Link className="link" to="/features">
+          features
+        </Link>
+        <Link className="link" to="/pricing">
+          pricing
+        </Link>
         <Line></Line>
         <Invite>GET AN INVITE</Invite>
       </Menu>
@@ -88,38 +86,12 @@ const Menu = styled.div`
   }
 `;
 
-const ListItem = styled.span`
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2.5;
-  text-align: center;
-  color: #000000;
-  cursor: pointer;
-  margin-top: 20px;
-`;
-
 const ItemBox = styled.div`
   display: none;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     margin-left: 5px;
-  }
-`;
-const ListItemTablet = styled.span`
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2;
-    color: #000000;
-    cursor: pointer;
-    margin-left: 37px;
   }
 `;
 
