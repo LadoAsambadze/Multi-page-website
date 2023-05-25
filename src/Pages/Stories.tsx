@@ -113,7 +113,7 @@ export default function Stories() {
           author={"by  Mohammed Abdul"}
         />
         <Photos
-          backphoto={"/flower.png"}
+          backphoto={"/flowers.png"}
           day={"March 1st 2020"}
           photoheader={"Somwarpet’s Beauty"}
           author={"by Michelle"}

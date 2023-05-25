@@ -24,7 +24,13 @@ const Photo = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  background: white;
+
+  @media (min-width: 1440px) {
+    & :hover {
+      transform: translateY(-10%);
+    }
+  }
 `;
 
 const InsidePhoto = styled.img`

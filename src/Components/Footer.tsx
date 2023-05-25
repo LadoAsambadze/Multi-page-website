@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -22,10 +23,18 @@ export default function Footer() {
             </Extra>
             <div>
               <OptionList>
-                <Option>Home</Option>
-                <Option>Stories</Option>
-                <Option>Features</Option>
-                <Option>Pricing</Option>
+                <Option>
+                  <Link to="/">home</Link>
+                </Option>
+                <Option>
+                  <Link to="/stories">stories</Link>
+                </Option>
+                <Option>
+                  <Link to="/features">features</Link>
+                </Option>
+                <Option>
+                  <Link to="/pricing">pricing</Link>
+                </Option>
               </OptionList>
             </div>
           </DesktopDiv>

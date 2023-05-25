@@ -4,7 +4,7 @@ export default function Invite() {
   return (
     <>
       <Main>
-        <Mobile src="invite.jpg" />
+        <Mobile src="invite.png" />
         <Tablet src="invite-tablet.jpg" />
         <Desktop src="invite-desktop.png" />
         <TextBox>

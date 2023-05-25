@@ -2,18 +2,27 @@ import styled from "styled-components";
 import logo from "/logo.png";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menu, setMenu] = useState<boolean>(true);
   return (
     <>
       <Head>
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
         <ItemBox>
-          <ListItemTablet>stories</ListItemTablet>
+          <ListItemTablet>
+            <Link to="/stories">stories</Link>
+          </ListItemTablet>
 
-          <ListItemTablet>features</ListItemTablet>
-          <ListItemTablet>pricing</ListItemTablet>
+          <ListItemTablet>
+            <Link to="/features">features</Link>
+          </ListItemTablet>
+          <ListItemTablet>
+            <Link to="/pricing">pricing</Link>
+          </ListItemTablet>
         </ItemBox>
         <Hamburger
           src={menu ? "/hamburger.jpg" : "/x.png"}
@@ -25,9 +34,16 @@ export default function Header() {
         <InviteTablet>GET AN INVITE</InviteTablet>
       </Head>
       <Menu style={{ display: menu ? "none" : "flex" }}>
-        <ListItem>stories</ListItem>
-        <ListItem>features</ListItem>
-        <ListItem>pricing</ListItem>
+        <ListItem>
+          <Link to="/stories">stories</Link>
+        </ListItem>
+
+        <ListItem>
+          <Link to="/features">features</Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/pricing">pricing</Link>
+        </ListItem>
         <Line></Line>
         <Invite>GET AN INVITE</Invite>
       </Menu>

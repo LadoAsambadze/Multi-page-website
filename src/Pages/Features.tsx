@@ -79,6 +79,7 @@ const Bitmap = styled.div`
 
 const BitmapMobile = styled.img`
   width: 100%;
+ 
   @media (min-width: 768px) {
     display: none;
   }
