@@ -79,7 +79,7 @@ const Bitmap = styled.div`
 
 const BitmapMobile = styled.img`
   width: 100%;
- 
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -149,7 +149,6 @@ const Benefits = styled.div`
     padding: 40px 40px 40px 40px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 12px;
   }
   @media (min-width: 1440px) {
     padding: 120px 165px;
@@ -157,5 +156,7 @@ const Benefits = styled.div`
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
   }
 `;

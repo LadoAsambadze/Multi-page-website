@@ -1,10 +1,18 @@
 import styled from "styled-components";
-
-export default function Benefit({ benefitPhoto, percent, benefitText }: any) {
+interface details {
+  benefitPhoto: string;
+  percent: string;
+  benefitText: string;
+}
+export default function Benefit({
+  benefitPhoto,
+  percent,
+  benefitText,
+}: details) {
   return (
     <>
       <BenefitSection>
-        <img src={benefitPhoto} alt="Responsive pc logo" />
+        <img src={benefitPhoto} />
         <Percent>{percent}</Percent>
         <BenefitText>{benefitText}</BenefitText>
       </BenefitSection>
@@ -17,7 +25,9 @@ const BenefitSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   margin-top: 56px;
+
   @media (min-width: 768px) {
     margin-top: 85px;
   }
@@ -34,8 +44,6 @@ const Percent = styled.span`
   color: #000000;
   margin-top: 48px;
 `;
-
-
 
 const BenefitText = styled.span`
   font-weight: 400;

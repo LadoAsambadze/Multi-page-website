@@ -6,6 +6,7 @@ import PriceList from "../Components/PriceList";
 
 export default function Pricing() {
   const [button, setButton] = useState<boolean>(false);
+  const [plan, setPlan] = useState<number>(2);
 
   return (
     <>
@@ -44,9 +45,8 @@ export default function Pricing() {
           <Year>Yearly</Year>
         </ButtonDiv>
       </Prices>
-
       <Compare>COMPARE</Compare>
-      <PriceList />
+      <PriceList plan={plan} setPlan={setPlan} button={button} />
       <Compares />
       <Invite />
     </>

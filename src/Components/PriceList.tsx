@@ -1,15 +1,28 @@
 import styled from "styled-components";
-import { useState } from "react";
 
-export default function PriceList() {
-  const [plan, setPlan] = useState<number>(2);
+interface details {
+  plan: number;
+  setPlan: React.Dispatch<React.SetStateAction<number>>;
+  button: boolean;
+}
+
+export default function PriceList({ plan, setPlan, button }: details) {
+  const handlePlan = (newPlan: number) => {
+    setPlan(newPlan);
+  };
+  let amount: number = 1;
+  if (button) {
+    amount = 10;
+  }
+
   return (
     <>
       <Main>
         <Basic
           style={{
-            background: plan === 1 ? "black" : "white",
+            background: plan === 1 ? "black" : "#F5F5F5",
           }}
+          className={plan === 1 ? "extra" : ""}
         >
           <ResponsiveDiv>
             <ResponsiveDivInside>
@@ -35,7 +48,7 @@ export default function PriceList() {
                   color: plan === 1 ? "white" : "black",
                 }}
               >
-                $ 19.00
+                $ {(amount * 19.0).toFixed(2)}
               </Dollar>
               <UnderDollar
                 style={{
@@ -52,7 +65,7 @@ export default function PriceList() {
               color: plan === 1 ? "black" : "white",
             }}
             onClick={() => {
-              setPlan(1);
+              handlePlan(1);
             }}
           >
             Pick Plan
@@ -60,8 +73,9 @@ export default function PriceList() {
         </Basic>
         <Basic
           style={{
-            background: plan === 2 ? "black" : "white",
+            background: plan === 2 ? "black" : "#F5F5F5",
           }}
+          className={plan === 2 ? "extra" : ""}
         >
           <ResponsiveDiv>
             <ResponsiveDivInside>
@@ -87,7 +101,7 @@ export default function PriceList() {
                   color: plan === 2 ? "white" : "black",
                 }}
               >
-                $ 39.00
+                $ {(amount * 39.0).toFixed(2)}
               </Dollar>
               <UnderDollar
                 style={{
@@ -104,7 +118,7 @@ export default function PriceList() {
               color: plan === 2 ? "black" : "white",
             }}
             onClick={() => {
-              setPlan(2);
+              handlePlan(2);
             }}
           >
             Pick Plan
@@ -113,8 +127,9 @@ export default function PriceList() {
         <Basic
           style={{
             marginRight: "0",
-            background: plan === 3 ? "black" : "white",
+            background: plan === 3 ? "black" : "#F5F5F5",
           }}
+          className={plan === 3 ? "extra" : ""}
         >
           <ResponsiveDiv>
             <ResponsiveDivInside>
@@ -140,7 +155,7 @@ export default function PriceList() {
                   color: plan === 3 ? "white" : "black",
                 }}
               >
-                $ 99.00
+                $ {(amount * 99.0).toFixed(2)}
               </Dollar>
               <UnderDollar
                 style={{
@@ -157,7 +172,7 @@ export default function PriceList() {
               color: plan === 3 ? "black" : "white",
             }}
             onClick={() => {
-              setPlan(3);
+              handlePlan(3);
             }}
           >
             Pick Plan
@@ -204,7 +219,7 @@ const Basic = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f5f5f5;
+  background: #dfdfdf;
   transition: 0.5s;
   @media (min-width: 768px) {
     margin-top: 24px;

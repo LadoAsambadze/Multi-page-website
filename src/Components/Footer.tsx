@@ -102,6 +102,7 @@ const IconDiv = styled.div`
 
 const IconImage = styled.img`
   margin-right: 14px;
+  cursor: pointer;
 `;
 
 const OptionList = styled.div`
