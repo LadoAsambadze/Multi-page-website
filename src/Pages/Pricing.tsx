@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Invite from "../Components/Invite";
 
 export default function Pricing() {
   return (
@@ -55,6 +56,129 @@ export default function Pricing() {
         <UnderDollar>per month</UnderDollar>
         <PickPlan>Pick Plan</PickPlan>
       </Basic>
+      <Features>
+        <FeaturesHead>The features</FeaturesHead>
+        <Line></Line>
+        <Story>UNLIMITED STORY POSTING</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>UNLIMITED PHOTO UPLOAD</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>EMBEDDING CUSTOM CONTENT</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>CUSTOMIZE METADATA</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>ADVANCED METRICS</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>PHOTO DOWNLOADS</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>SEARCH ENGINE INDEXING</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+        <Story>CUSTOM ANALYTICS</Story>
+        <TypesDiv>
+          <TypeDiv>
+            <Type>Basic</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Pro</Type>
+          </TypeDiv>
+          <TypeDiv>
+            <Type>Bussines</Type>
+            <Mark src="mark.png" />
+          </TypeDiv>
+        </TypesDiv>
+        <LineLight></LineLight>
+      </Features>
+      <Invite />
     </>
   );
 }
@@ -243,4 +367,73 @@ const PickPlan = styled.button`
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+`;
+
+const Features = styled.div`
+  padding: 0px 28px 64px 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const FeaturesHead = styled.span`
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+`;
+
+const Line = styled.div`
+  border: 1px solid #000000;
+  margin-top: 23px;
+  width: 100%;
+`;
+
+const Story = styled.span`
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 23px;
+`;
+
+const TypesDiv = styled.div`
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+`;
+
+const TypeDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const Type = styled.span`
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 1.66667px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-transform: uppercase;
+`;
+
+const Mark = styled.img`
+  margin-top: 8px;
+`;
+
+const LineLight = styled.div`
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  background: #dfdfdf;
+  margin-top: 24px;
 `;
