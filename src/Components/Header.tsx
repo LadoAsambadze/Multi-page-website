@@ -13,13 +13,31 @@ export default function Header() {
           <img src={logo} alt="Logo" />
         </Link>
         <ItemBox>
-          <Link className="link link2 " to="/stories">
+          <Link
+            onClick={() => {
+              setMenu(true);
+            }}
+            className="link link2 "
+            to="/stories"
+          >
             stories
           </Link>
-          <Link className="link link2" to="/features">
+          <Link
+            onClick={() => {
+              setMenu(true);
+            }}
+            className="link link2"
+            to="/features"
+          >
             features
           </Link>
-          <Link className="link link2" to="/pricing">
+          <Link
+            onClick={() => {
+              setMenu(true);
+            }}
+            className="link link2"
+            to="/pricing"
+          >
             pricing
           </Link>
         </ItemBox>
@@ -33,13 +51,31 @@ export default function Header() {
         <InviteTablet>GET AN INVITE</InviteTablet>
       </Head>
       <Menu style={{ display: menu ? "none" : "flex" }}>
-        <Link className="link link3 " to="/stories">
+        <Link
+          onClick={() => {
+            setMenu(true);
+          }}
+          className="link link3 "
+          to="/stories"
+        >
           stories
         </Link>
-        <Link className="link link3" to="/features">
+        <Link
+          onClick={() => {
+            setMenu(true);
+          }}
+          className="link link3"
+          to="/features"
+        >
           features
         </Link>
-        <Link className="link link3" to="/pricing">
+        <Link
+          onClick={() => {
+            setMenu(true);
+          }}
+          className="link link3"
+          to="/pricing"
+        >
           pricing
         </Link>
         <Line></Line>
